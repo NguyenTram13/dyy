@@ -16,7 +16,7 @@ window.addEventListener("load", function(){
             
             renderSweetAlert();
             const sweetItem =  document.querySelector(".sweet-alert");
-            console.log(sweetItem)
+            // console.log(sweetItem)
             sweetItem.classList.add("tranlate0")
             // if(sweetItem){
             //     setTimeout(function(){
@@ -26,7 +26,8 @@ window.addEventListener("load", function(){
             // }
         })
 
-       no.addEventListener("mouseenter",function(){
+        const no = this.document.querySelector('.button-right');
+        no.addEventListener("mouseenter",function(){
             let w = window.innerWidth;
             let h = window.innerHeight;
             let indexLeft= no.offsetLeft;
