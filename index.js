@@ -26,11 +26,15 @@ window.addEventListener("load", function(){
             // }
         })
 
-        const no = this.document.querySelector('.button-right');
-        no.addEventListener("mouseenter",function(){
-                
-                let scrollleft  = Math.floor(Math.random() * 200 );
-                let scrolltop  = Math.floor(Math.random() * 500 );
+       no.addEventListener("mouseenter",function(){
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            let indexLeft= no.offsetLeft;
+            let indexTop= no.offsetTop;
+             console.log(Math.random() * 200);
+           
+                let scrollleft  = Math.floor(Math.random() * (w-indexLeft-150) );
+                let scrolltop  = Math.floor(Math.random() * (h-indexTop-150) );
 
                 let position  = ["scrolltop",'scrollright','scrollleft','scrollbot']
                 console.log(scroll);
@@ -39,12 +43,15 @@ window.addEventListener("load", function(){
 
         })
         no.addEventListener("click",function(){
-                
-            let scrollleft  = Math.floor(Math.random() * 200 );
-            let scrolltop  = Math.floor(Math.random() * 500 );
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            let indexLeft= no.offsetLeft;
+            let indexTop= no.offsetTop;
+            let scrollleft  = Math.floor(Math.random() * (w-indexLeft-150) );
+                let scrolltop  = Math.floor(Math.random() * (h-indexTop-150) );
 
             let position  = ["scrolltop",'scrollright','scrollleft','scrollbot']
-            console.log(scroll);
+            // console.log(scroll);
             no.style.left = `${scrollleft}px`;
             no.style.top = `${scrolltop}px`;
 
